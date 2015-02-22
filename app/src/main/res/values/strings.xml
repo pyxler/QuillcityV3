@@ -2,7 +2,9 @@
     <string name="app_name">QuillcityV3</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_add_quilled">Add a Quilled</string>
+    <string name="send">Send</string>
+    <string name='cancel'>Cancel</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

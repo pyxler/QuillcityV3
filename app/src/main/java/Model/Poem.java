@@ -8,6 +8,9 @@ public class Poem {
     private String mAuthor;
     private boolean mAnonymous;
     private String mPoem;
+    private int Likes;
+    private int Dislikes;
+    private int Neutrals;
     private double mLat;
     private double mLong;
 
@@ -15,6 +18,21 @@ public class Poem {
     public Poem(String author, String Text){
         mAuthor = author;
         mPoem = Text;
+        Likes = 0;
+        Dislikes = 0;
+        Neutrals = 0;
+    }
+
+    public void Liked(){
+        Likes++;
+    }
+
+    public void Disliked(){
+        Dislikes++;
+    }
+
+    public void Neutrals(){
+        Neutrals++;
     }
 
     public String getAuthor(){

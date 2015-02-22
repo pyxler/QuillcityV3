@@ -45,7 +45,7 @@ public class PoemAdapter extends ArrayAdapter<Poem>{
             TextView author = (TextView) rowView.findViewById(R.id.row_author);
             TextView summary = (TextView) rowView.findViewById(R.id.row_summary);
 
-            author.setText(mPoems.get(position).getAuthor());
+            author.setText("By " + mPoems.get(position).getAuthor());
             summary.setText(mPoems.get(position).getPoem());
         }
 

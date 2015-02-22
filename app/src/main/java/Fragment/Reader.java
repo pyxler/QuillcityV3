@@ -6,6 +6,8 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.peter.quillcityv3.R;
@@ -19,6 +21,12 @@ public class Reader extends Fragment {
 
     private static volatile Reader instance;
     private static Poem mPoem;
+
+    private TextView author;
+    private TextView poem;
+    private ImageButton Like;
+    private Button Neutral;
+    private ImageButton Dislike;
 
     public static Reader getInstance(){
         if (instance == null)
@@ -44,11 +52,42 @@ public class Reader extends Fragment {
     public void onActivityCreated(Bundle onSavedInstances){
         super.onActivityCreated(onSavedInstances);
         mPoem = new Poem("Peter","All the world's a page and all the men and women are merely quillers");
-        TextView author = (TextView) getActivity().findViewById(R.id.reader_author);
-        TextView poem = (TextView) getActivity().findViewById(R.id.reader_poem);
+        author = (TextView) getActivity().findViewById(R.id.reader_author);
+        poem = (TextView) getActivity().findViewById(R.id.reader_poem);
 
-        author.setText(mPoem.getAuthor());
+        Like = (ImageButton) getActivity().findViewById(R.id.reader_positive);
+        Dislike = (ImageButton) getActivity().findViewById(R.id.reader_negative);
+
+        Like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPoem.Liked();
+                Like.setVisibility(View.GONE);
+                Dislike.setVisibility(View.GONE);
+            }
+        });
+
+        Dislike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPoem.Disliked();
+                Like.setVisibility(View.GONE);
+                Dislike.setVisibility(View.GONE);
+            }
+        });
+
+        author.setText("By " + mPoem.getAuthor());
         poem.setText(mPoem.getPoem());
+    }
+
+    public void setPoem(Poem nPoem){
+        mPoem = nPoem;
+
+        author.setText("By " +  mPoem.getAuthor());
+        poem.setText(mPoem.getPoem());
+
+        Like.setVisibility(View.VISIBLE);
+        Dislike.setVisibility(View.VISIBLE);
     }
 
 
