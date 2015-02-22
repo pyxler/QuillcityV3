@@ -69,4 +69,8 @@ public class MainActivity extends ActionBarActivity implements QuillList.Selecti
     public void Selected(Poem poem) {
         reader.setPoem(poem);
     }
+
+    public void addQuill(Poem quill) {
+
+    }
 }

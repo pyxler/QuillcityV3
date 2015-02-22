@@ -9,6 +9,7 @@ import android.util.Pair;
 import android.widget.Toast;
 
 import com.agora.quillcity.backend.myApi.MyApi;
+import com.agora.quillcity.backend.myApi.model.QuillEntity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -46,7 +47,7 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
         String name = params[0].second;
 
         try {
-            return myApiService.getPoem(3.141596).execute().getData();
+            return myApiService.getPoem(3.141596).execute().getPoem();
         } catch (IOException e) {
             return e.getMessage();
         }

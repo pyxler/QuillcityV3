@@ -5,6 +5,7 @@ package Model;
  */
 public class Poem {
 
+    private Integer id;
     private String mAuthor;
     private boolean mAnonymous;
     private String mPoem;
@@ -31,7 +32,7 @@ public class Poem {
         Dislikes++;
     }
 
-    public void Neutrals(){
+    public void Neutraled(){
         Neutrals++;
     }
 

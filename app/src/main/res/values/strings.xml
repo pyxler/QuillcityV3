@@ -2,7 +2,7 @@
     <string name="app_name">QuillcityV3</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_add_quilled">Add a Quilled</string>
+    <string name="action_add_quilled">Add a Quill</string>
     <string name="send">Send</string>
     <string name='cancel'>Cancel</string>
 
