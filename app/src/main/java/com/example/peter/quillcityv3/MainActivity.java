@@ -1,9 +1,11 @@
 package com.example.peter.quillcityv3;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -36,6 +38,8 @@ public class MainActivity extends ActionBarActivity implements QuillList.Selecti
         qList = QuillList.getInstance();
         fragmentTransaction2.add(R.id.container_2, qList);
         fragmentTransaction2.commit();
+
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Pablo"));
     }
 
 

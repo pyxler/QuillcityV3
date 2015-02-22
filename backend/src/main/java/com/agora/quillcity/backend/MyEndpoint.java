@@ -29,4 +29,10 @@ public class MyEndpoint {
         return response;
     }
 
+    @ApiMethod(name = "getPoem")
+    public MyBean getPoem(@Named("location") Double location) {
+        MyBean response = new MyBean();
+        response.setData("Here is a quill that was composed at " + location);
+        return response;
+    }
 }
