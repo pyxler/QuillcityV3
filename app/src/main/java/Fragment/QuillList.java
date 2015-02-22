@@ -55,6 +55,7 @@ public class QuillList extends Fragment {
         mListener = (Selection) getActivity();
 
         mPoems = new ArrayList<Poem>();
+        mPoems.add(new Poem("The person sitting across you in the bus","Hey, you look cute!"));
         mPoems.add(new Poem("Shakespeare", "All the world's a stage and all the men and women merely players"));
         mPoems.add(new Poem("Shakespeare", "Tomorrow and Tomorrow and Tomorrow Creeps in this petty pace from day to day to the last syllable of recorded time"));
         mPoems.add(new Poem("Napoleon","Je ne suis pas mechant, je suis vainqueur"));

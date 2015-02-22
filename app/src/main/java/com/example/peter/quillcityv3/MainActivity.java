@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import Fragment.AddQuill;
 import Fragment.QuillList;
 import Fragment.Reader;
 import Model.Poem;
@@ -56,8 +55,6 @@ public class MainActivity extends ActionBarActivity implements QuillList.Selecti
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.add_quilled) {
-            AddQuill addQuill = new AddQuill();
-            addQuill.show(getFragmentManager(), null);
             return true;
         }
 
@@ -67,6 +64,5 @@ public class MainActivity extends ActionBarActivity implements QuillList.Selecti
     @Override
     public void Selected(Poem poem) {
         reader.setPoem(poem);
-        slidingPaneLayout.closePane();
     }
 }
