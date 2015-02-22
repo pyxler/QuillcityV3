@@ -17,16 +17,18 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        setTitle("Quill City");
+
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         Reader reader = new Reader();
-        fragmentTransaction.add(R.id.container_reader, reader);
+        fragmentTransaction.add(R.id.container_1, reader);
         fragmentTransaction.commit();
 
         FragmentTransaction fragmentTransaction2 = getFragmentManager().beginTransaction();
         QuillList qList = new QuillList();
-        fragmentTransaction2.replace(R.id.container_list, qList);
+        fragmentTransaction2.replace(R.id.container_2, qList);
         fragmentTransaction2.addToBackStack(null);
-        fragmentTransaction2.commit();*/
+        fragmentTransaction2.commit();
     }
 
 

@@ -25,6 +25,9 @@ public class PoemAdapter extends ArrayAdapter<Poem>{
     public PoemAdapter(Context context, ArrayList<Poem> poems){
         super(context, R.layout.row_list, poems);
 
+        mContext =context;
+        mPoems = poems;
+
     }
 
     @Override

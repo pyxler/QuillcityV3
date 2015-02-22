@@ -43,7 +43,7 @@ public class Reader extends Fragment {
     @Override
     public void onActivityCreated(Bundle onSavedInstances){
         super.onActivityCreated(onSavedInstances);
-        mPoem = new Poem("Peter","Hello");
+        mPoem = new Poem("Peter","All the world's a page and all the men and women are merely quillers");
         TextView author = (TextView) getActivity().findViewById(R.id.reader_author);
         TextView poem = (TextView) getActivity().findViewById(R.id.reader_poem);
 

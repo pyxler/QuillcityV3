@@ -5,19 +5,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <fragment
+    <FrameLayout
+        android:id="@+id/container_2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
         android:id="@+id/container_1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:name="Fragment.QuillList"
-        tools:layout="@layout/fragment_quill_list" />
+        android:layout_height="wrap_content" />
 
-    <fragment
-        android:id="@+id/container_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:name="Fragment.Reader"
-        tools:layout="@layout/fragment_reader" />
+
 
 
 </android.support.v4.widget.SlidingPaneLayout >

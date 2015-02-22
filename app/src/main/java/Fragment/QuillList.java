@@ -50,13 +50,17 @@ public class QuillList extends Fragment {
         super.onActivityCreated(savedInstanceStates);
 
         mPoems = new ArrayList<Poem>();
-        mPoems.add(new Poem("Peter", "Android is gay"));
+        mPoems.add(new Poem("Shakespeare", "All the world's a stage and all the men and women merely players"));
+        mPoems.add(new Poem("Shakespeare", "Tomorrow and Tomorrow and Tomorrow Creeps in this petty pace from day to day to the last syllable of recorded time"));
+        mPoems.add(new Poem("Napoleon","Je ne suis pas mechant, je suis vainqueur"));
+        mPoems.add(new Poem("Jules Cesar","Je suis venu, J'ai vu, J'ai vaincu"));
+
 
         //declares list view
         ListView listView = (ListView) getActivity().findViewById(R.id.quill_listview);
 
         //adapter
-        PoemAdapter poemAdapter = new PoemAdapter(getActivity(), mPoems);
+        PoemAdapter poemAdapter = new PoemAdapter(getActivity().getBaseContext(), mPoems);
         listView.setAdapter(poemAdapter);
     }
 
